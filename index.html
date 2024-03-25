@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-SvJjVxRDfYifz5TNcC9lGfNlzLTUanB6jsd8mGPfYFBBpc8m2GOyPTgXAf4NriqMyH/N57jzBSLoYApJ4roN7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Create Color list with HTML and CSS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: sans-serif;
+        }
+
+        .container{
+            position: relative;
+            top: 50px;
+        }
+
+        li{
+            list-style: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        ul{
+            display: flex;
+            border-radius: 12px;
+            overflow: hidden;
+            background: yellow;
+        }
+
+        .color-item{
+            color: transparent;
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            background: red;
+            transition: all .2s ease;
+        }
+
+        .color-item:hover{
+            color: white;
+            flex-grow: 3;
+        }
+
+        .color-item:first-child{
+            background: yellow;
+        }
+        .color-item:nth-child(2){
+            background: rgb(0, 13, 255);
+        }
+        .color-item:nth-child(3){
+            background: rgb(43, 255, 0);
+        }
+        .color-item:nth-child(4){
+            background: rgb(255, 0, 0);
+        }
+        .color-item:nth-child(5){
+            background: rgb(230, 0, 255);
+        }
+
+        .container-btn{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .btn{
+            outline: none;
+            border: none;
+            background: none;
+            padding: 4px;
+            color: rgb(133, 133, 133);
+            cursor: pointer;
+        }
+
+        .btn:hover{
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="color-list">
+            <li class="color-item">#ff00ff</li>
+            <li class="color-item">#ff00ff</li>
+            <li class="color-item">#ff00ff</li>
+            <li class="color-item">#ff00ff</li>
+            <li class="color-item">#ff00ff</li>
+        </ul>
+        <div class="container-btn">
+            <button class="btn"><i class="fa-regular fa-heart"></i>120k</button>
+            <button class="btn"></button>
+        </div>
+    </div>
+</body>
+</html>
